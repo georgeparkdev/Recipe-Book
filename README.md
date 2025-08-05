@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="logo.png" alt="Recipe-Book Logo" width="120" style="margin-bottom:1em;" />
+</div>
+
 # Recipe-Book 🍳
 
 ## Overview
