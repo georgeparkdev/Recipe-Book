@@ -1,0 +1,196 @@
+{
+  "title": "Паста со сливочно-сырным соусом и креветками",
+  "yield": "На 2 порции",
+  "ingredients": [
+    {
+      "quantity": null,
+      "unit": null,
+      "item": "макароны спагетти",
+      "descriptor": "тонкие",
+      "optional": false
+    },
+    {
+      "quantity": 300,
+      "unit": "г",
+      "item": "сливки",
+      "descriptor": null,
+      "optional": false
+    },
+    {
+      "quantity": "10–14",
+      "unit": "шт.",
+      "item": "креветки",
+      "descriptor": "очищенные, разрезанные вдоль",
+      "optional": false
+    },
+    {
+      "quantity": null,
+      "unit": null,
+      "item": "шампиньоны",
+      "descriptor": "целиком",
+      "optional": true
+    },
+    {
+      "quantity": 100,
+      "unit": "г",
+      "item": "сыр моцарелла",
+      "descriptor": "натертый",
+      "optional": false
+    },
+    {
+      "quantity": null,
+      "unit": null,
+      "item": "сыр пармезан",
+      "descriptor": "тертый",
+      "optional": false
+    },
+    {
+      "quantity": null,
+      "unit": null,
+      "item": "масло сливочное",
+      "descriptor": null,
+      "optional": false
+    },
+    {
+      "quantity": null,
+      "unit": null,
+      "item": "масло растительное",
+      "descriptor": null,
+      "optional": false
+    },
+    {
+      "quantity": null,
+      "unit": null,
+      "item": "чеснок",
+      "descriptor": "слайсами",
+      "optional": false
+    },
+    {
+      "quantity": null,
+      "unit": null,
+      "item": "тимьян",
+      "descriptor": "свежий",
+      "optional": false
+    },
+    {
+      "quantity": null,
+      "unit": null,
+      "item": "перец черный",
+      "descriptor": "молотый",
+      "optional": false
+    },
+    {
+      "quantity": null,
+      "unit": null,
+      "item": "соль",
+      "descriptor": null,
+      "optional": false
+    },
+    {
+      "quantity": null,
+      "unit": null,
+      "item": "кинза",
+      "descriptor": null,
+      "optional": true
+    },
+    {
+      "quantity": null,
+      "unit": null,
+      "item": "кориандр",
+      "descriptor": null,
+      "optional": true
+    },
+    {
+      "quantity": null,
+      "unit": null,
+      "item": "кумин",
+      "descriptor": null,
+      "optional": true
+    },
+    {
+      "quantity": null,
+      "unit": null,
+      "item": "помидоры черри",
+      "descriptor": null,
+      "optional": true
+    }
+  ],
+  "equipment": [
+    "кастрюля",
+    "сотейник",
+    "сковорода",
+    "терка",
+    "венчик",
+    "щипцы",
+    "силиконовая лопатка",
+    "микроволновка"
+  ],
+  "total_time_seconds": null,
+  "steps": [
+    {
+      "number": 1,
+      "action": "Разморозьте креветки в холодной воде",
+      "duration_seconds": null,
+      "temperature_celsius": null,
+      "notes": null
+    },
+    {
+      "number": 2,
+      "action": "Замаринуйте креветки в растительном масле с чесноком, тимьяном и солью",
+      "duration_seconds": null,
+      "temperature_celsius": null,
+      "notes": "Маринуйте, пока варятся макароны"
+    },
+    {
+      "number": 3,
+      "action": "Натрите моцареллу на мелкой терке",
+      "duration_seconds": null,
+      "temperature_celsius": null,
+      "notes": null
+    },
+    {
+      "number": 4,
+      "action": "Сварите макароны до аль денте, откиньте, добавьте сливочное масло и остудите",
+      "duration_seconds": null,
+      "temperature_celsius": null,
+      "notes": "Варите на 1 мин меньше, чем указано на упаковке"
+    },
+    {
+      "number": 5,
+      "action": "Приготовьте сливочно-сырный соус",
+      "duration_seconds": null,
+      "temperature_celsius": 50,
+      "notes": "Нагрейте сливки с кусочком сливочного масла до 50 °C, всыпьте моцареллу и помешивайте, пока соус не станет однородным"
+    },
+    {
+      "number": 6,
+      "action": "Обжарьте креветки на сильно разогретой сковороде с чесноком, тимьяном и черным перцем",
+      "duration_seconds": null,
+      "temperature_celsius": null,
+      "notes": "Жарьте партиями, чтобы креветки не тушились"
+    },
+    {
+      "number": 7,
+      "action": "Переложите макароны вместе с водой в соус и доведите до лёгкого кипения",
+      "duration_seconds": null,
+      "temperature_celsius": null,
+      "notes": "Если макароны слиплись, обдайте их кипятком"
+    },
+    {
+      "number": 8,
+      "action": "Добавьте креветки, аккуратно перемешайте и прогрейте до упаривания соуса",
+      "duration_seconds": null,
+      "temperature_celsius": null,
+      "notes": "Попробуйте на соль и при необходимости досолите"
+    },
+    {
+      "number": 9,
+      "action": "Разложите пасту по тарелкам и посыпьте пармезаном",
+      "duration_seconds": null,
+      "temperature_celsius": null,
+      "notes": null
+    }
+  ],
+  "dietary_tags": [],
+  "source": null
+}
