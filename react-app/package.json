@@ -8,6 +8,8 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
+    "format": "eslint . --fix",
+    "test": "tsc -p tsconfig.app.json --noEmit false --outDir dist-tests && node --test dist-tests/utils/getIngredientCount.test.js && rm -rf dist-tests",
     "preview": "vite preview"
   },
   "dependencies": {

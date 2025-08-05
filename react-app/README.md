@@ -9,6 +9,8 @@ Currently, two official plugins are available:
 
 # Recipe Book React App
 
+A modern web application that showcases a collection of recipes with a beautiful vintage cookbook design.
+
 Современное веб-приложение для отображения коллекции рецептов с красивым дизайном в стиле кулинарной книги.
 
 ## Возможности
@@ -93,6 +95,23 @@ URL: https://georgeparkdev.github.io/Recipe-Book
 - **Типографика с засечками** для уютного ощущения
 - **Анимации и переходы** для плавного взаимодействия
 - **Карточки рецептов** с предварительным просмотром ингредиентов
+
+## Accessibility and Performance Practices
+
+- Semantic HTML elements and ARIA labels for structure and usability
+- Visible focus indicators and keyboard-friendly navigation
+- Responsive images with lazy loading
+- Fast builds and optimized bundles powered by Vite
+
+## Development Scripts
+
+Run linting, formatting, and tests:
+
+```bash
+npm run lint
+npm run format
+npm test
+```
 
 You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
