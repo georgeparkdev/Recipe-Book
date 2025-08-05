@@ -7,7 +7,8 @@ A comprehensive system for converting Russian audio recipes into structured JSON
 - 🎤 **Audio Transcription**: Convert Russian speech to text using OpenAI Whisper
 - 🤖 **AI-Powered Structuring**: Transform unstructured text into standardized recipe JSON
 - 📁 **Organized Data**: Clean, searchable recipe database
-- 🌐 **React Frontend**: Beautiful recipe book interface (coming soon)
+- 🌐 **React Frontend**: Beautiful recipe book interface
+- 🔍 **Search & Tags**: Filter recipes by title or custom tags in real time
 
 ## Quick Start
 
@@ -114,6 +115,7 @@ python scripts\transcribe\transcribe_audio.py --append
     }
   ],
   "dietary_tags": [],
+  "custom_tags": ["ужин", "быстро"],
   "source": null
 }
 ```
@@ -195,7 +197,7 @@ flake8 scripts/
 - ✅ AI-powered recipe structuring
 - ✅ Comprehensive documentation
 - 🔄 React web application (in progress)
-- 🔮 Recipe search and filtering
+ - ✅ Recipe search and filtering
 - 🔮 Image support
 - 🔮 Export functionality
 

@@ -97,20 +97,21 @@ The Recipe-Book system converts Russian audio recordings into structured recipe 
      ],
      "equipment": ["кастрюля", "сотейник", "сковорода"],
      "total_time_seconds": null,
-     "steps": [
-       {
-         "number": 1,
-         "action": "Разморозьте креветки в холодной воде",
-         "duration_seconds": null,
-         "temperature_celsius": null,
-         "notes": null
-       }
-       // ... more steps
-     ],
-     "dietary_tags": [],
-     "source": null
-   }
-   ```
+    "steps": [
+      {
+        "number": 1,
+        "action": "Разморозьте креветки в холодной воде",
+        "duration_seconds": null,
+        "temperature_celsius": null,
+        "notes": null
+      }
+      // ... more steps
+    ],
+    "dietary_tags": [],
+    "custom_tags": ["ужин", "быстро"],
+    "source": null
+  }
+  ```
 
 5. **Save Recipe File**
    - Create filename using kebab-case: `pasta-with-creamy-cheese-sauce-and-shrimp.json`
@@ -130,6 +131,7 @@ The Recipe-Book system converts Russian audio recordings into structured recipe 
    - Verify ingredient quantities and units
    - Check cooking steps are in logical order
    - Ensure Russian text is preserved correctly
+   - Include relevant custom tags or use an empty array
    - Validate equipment list is complete
 
 3. **Test with Future React App**
