@@ -2,9 +2,9 @@ import React from "react";
 import { useParams, Link } from "react-router-dom";
 import { getRecipeById } from "../data";
 
-// Using placeholder image for demo purposes
-const ChefAvatar =
-  "https://images.unsplash.com/photo-1566554273541-37a9ca77b91f?w=200&h=200&fit=crop&crop=face";
+// Default chef values
+const DEFAULT_CHEF_NAME = "Анонимный шеф";
+const DEFAULT_CHEF_IMAGE = null;
 
 const RecipeDetailPage: React.FC = () => {
   const { recipeId } = useParams<{ recipeId: string }>();
@@ -26,13 +26,17 @@ const RecipeDetailPage: React.FC = () => {
     );
   }
 
+  // Get author info with fallback
+  const chefName = recipe.author?.name || DEFAULT_CHEF_NAME;
+  const chefImage = recipe.author?.image || DEFAULT_CHEF_IMAGE;
+
   // Convert recipe data to structured data format
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Recipe",
     name: recipe.title,
-    author: { "@type": "Person", name: "Шеф-повар" },
-    image: ChefAvatar,
+    author: { "@type": "Person", name: chefName, image: chefImage },
+    image: chefImage,
     description: recipe.title,
     prepTime: recipe.total_time_seconds ? `PT${Math.floor(recipe.total_time_seconds / 60)}M` : undefined,
     cookTime: recipe.total_time_seconds ? `PT${Math.floor(recipe.total_time_seconds / 60)}M` : undefined,
@@ -120,17 +124,23 @@ const RecipeDetailPage: React.FC = () => {
 
             <header aria-label="Chef profile" className="text-center mb-8">
               <div className="relative inline-block">
-                <img
-                  src={ChefAvatar}
-                  alt="Портрет шеф-повара"
-                  className="w-24 h-24 rounded-full object-cover mx-auto border-4 border-amber-300 shadow-lg sepia"
-                />
+                {chefImage ? (
+                  <img
+                    src={chefImage}
+                    alt={`Портрет шеф-повара: ${chefName}`}
+                    className="w-24 h-24 rounded-full object-cover mx-auto border-4 border-amber-300 shadow-lg sepia"
+                  />
+                ) : (
+                  <div className="w-24 h-24 rounded-full mx-auto border-4 border-amber-300 shadow-lg bg-amber-100 flex items-center justify-center text-amber-400 text-4xl font-bold sepia">
+                    ?
+                  </div>
+                )}
                 <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-amber-200 rounded-full border-2 border-amber-400 flex items-center justify-center text-amber-700 text-xs font-bold">
                   ✓
                 </div>
               </div>
               <h2 className="mt-4 text-amber-800 text-xl font-serif italic">
-                ~ Шеф-повар ~
+                ~ {chefName} ~
               </h2>
             </header>
 

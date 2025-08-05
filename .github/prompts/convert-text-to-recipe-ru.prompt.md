@@ -16,29 +16,35 @@ USER MESSAGE
   "yield": string, // Например: "На 4 порции"
   "ingredients": [ // В исходном порядке
     {
-    "quantity": number | string, // Диапазоны ("1–2") оставлять строкой
-    "unit": string | null, // г, мл, ст.л. и т.п. | null если без единицы
-    "item": string, // Ингредиент
-    "descriptor": string | null, // Нарезка, температура и т.д.
-    "optional": boolean // True, если помечено как «по желанию»
+      "quantity": number | string, // Диапазоны ("1–2") оставлять строкой
+      "unit": string | null, // г, мл, ст.л. и т.п. | null если без единицы
+      "item": string, // Ингредиент
+      "descriptor": string | null, // Нарезка, температура и т.д.
+      "optional": boolean // True, если помечено как «по желанию»
     }
   ],
   "equipment": [string], // Кастрюля, блендер, термометр …
   "total_time_seconds": integer | null, // Сумма активного + пассивного времени в секундах
   "steps": [
     {
-    "number": integer, // 1-based
-    "action": string, // Императив: «Обжарьте лук»
-    "duration_seconds": integer | null, // Если указан таймер (даже «30 с»)
-    "temperature_celsius": number | null, // Конвертировать из °F при наличии
-    "notes": string | null // Визуальные маркеры, советы
+      "number": integer, // 1-based
+      "action": string, // Императив: «Обжарьте лук»
+      "duration_seconds": integer | null, // Если указан таймер (даже «30 с»)
+      "temperature_celsius": number | null, // Конвертировать из °F при наличии
+      "notes": string | null // Визуальные маркеры, советы
     }
   ],
   "dietary_tags": [string], // Веган, безглютеновый и т.п., ТОЛЬКО если явно указано
   "custom_tags": [string], // Любые пользовательские теги (например, "ужин", "быстро"), если явно указаны в тексте рецепта. Если нет — []
+  "author": {
+    "name": string, // Имя автора. Если не указано — "Анонимный шеф"
+    "image": string | null // URL изображения автора. Если не указано — null
+  },
   "source": string | null // URL или публикация, если присутствует
 }
 ```
+
+• author: Если автор не указан в тексте, используйте значения по умолчанию: name = "Анонимный шеф", image = null.
 
 Ограничения:
 • Поля item, descriptor и action сохраняйте на русском без вольных перефразирований.

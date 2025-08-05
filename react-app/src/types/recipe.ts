@@ -7,6 +7,10 @@ export interface Recipe {
   steps: Step[];
   dietary_tags: string[];
   custom_tags: string[];
+  author?: {
+    name: string;
+    image: string | null;
+  };
   source: string | null;
 }
 

@@ -193,5 +193,9 @@
   ],
   "dietary_tags": [],
   "custom_tags": ["ужин", "быстро"],
+  "author": {
+    "name": "Витя",
+    "image": "https://raw.githubusercontent.com/georgeparkdev/Recipe-Book/refs/heads/main/assets/vitya-chef.png"
+  },
   "source": null
 }
