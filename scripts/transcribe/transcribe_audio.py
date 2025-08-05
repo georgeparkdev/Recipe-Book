@@ -1,19 +1,25 @@
 """
-Comprehensive documentation for the transcribe_audio.py script.
+transcribe_audio.py — Batch transcription of Russian audio files using OpenAI Whisper.
 
-This module provides batch transcription of Russian audio files using OpenAI's Whisper model.
-The script processes all audio files in the .audio-inputs directory and outputs transcriptions
+This script processes all audio files in the .audio-inputs directory and outputs transcriptions
 to .audio-outputs/transcription.txt with organized formatting.
 
 Features:
-- Recursive audio file discovery with multiple format support
-- Batch processing with progress tracking and timing
-- Configurable Whisper models and device selection
-- Robust error handling and logging
-- UTF-8 output with organized file structure
+    - Recursive audio file discovery with multiple format support
+    - Batch processing with progress tracking and timing
+    - Configurable Whisper models and device selection
+    - Robust error handling and logging
+    - UTF-8 output with organized file structure
 
-Usage:
-    python scripts/transcribe/transcribe_audio.py [options]
+Parameters:
+    --model      Whisper model size (default: small). Options: tiny, base, small, medium, large
+    --device     Device to use: cpu or cuda (default: cpu)
+    --language   Transcription language (default: ru)
+    --append     Append to existing output file (default: False)
+    --verbose    Enable verbose logging (default: False)
+
+Example usage (small model, Russian language):
+    python scripts/transcribe/transcribe_audio.py --model small --language ru
 
 Examples:
     # Basic usage with default settings
