@@ -1,15 +1,17 @@
 import type { Recipe, RecipeWithId } from '../types/recipe';
 
-// Import all recipe JSON files
-import pastaWithCreamyCheeseSauceAndShrimp from './recipes/pasta-with-creamy-cheese-sauce-and-shrimp.json';
+// Import all recipe JSON files dynamically
+const recipeModules = import.meta.glob<Recipe>('./recipes/*.json', {
+  eager: true,
+  import: 'default',
+});
 
-// Create recipes array with IDs
-const recipes: RecipeWithId[] = [
-  {
-    ...pastaWithCreamyCheeseSauceAndShrimp as Recipe,
-    id: 'pasta-with-creamy-cheese-sauce-and-shrimp',
-  },
-];
+// Create recipes array with IDs based on file names
+const recipes: RecipeWithId[] = Object.entries(recipeModules).map(([path, recipe]) => {
+  const fileName = path.split('/').at(-1) ?? '';
+  const id = fileName.replace(/\.json$/, '');
+  return { ...recipe, id };
+});
 
 export default recipes;
 
