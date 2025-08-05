@@ -192,5 +192,6 @@
     }
   ],
   "dietary_tags": [],
+  "custom_tags": ["ужин", "быстро"],
   "source": null
 }

@@ -54,6 +54,7 @@ interface Recipe {
   total_time_seconds: number | null; // Total cooking time
   steps: Step[]; // Cooking instructions
   dietary_tags: string[]; // Diet restrictions (if any)
+  custom_tags: string[]; // User-defined tags
   source: string | null; // Original source
 }
 
@@ -223,7 +224,7 @@ python scripts\transcribe\transcribe_audio.py --device cuda
 ## Future Enhancements
 
 - [ ] React web application development
-- [ ] Recipe search and filtering
+ - [x] Recipe search and filtering
 - [ ] Image support for recipes
 - [ ] Export functionality (PDF, etc.)
 - [ ] Multi-language support

@@ -37,6 +37,7 @@ const RecipeDetailPage: React.FC = () => {
     prepTime: recipe.total_time_seconds ? `PT${Math.floor(recipe.total_time_seconds / 60)}M` : undefined,
     cookTime: recipe.total_time_seconds ? `PT${Math.floor(recipe.total_time_seconds / 60)}M` : undefined,
     recipeYield: recipe.yield,
+    keywords: recipe.custom_tags.join(', '),
     recipeIngredient: recipe.ingredients.map(ing => {
       const quantity = ing.quantity ? `${ing.quantity} ` : '';
       const unit = ing.unit ? `${ing.unit} ` : '';
@@ -208,6 +209,25 @@ const RecipeDetailPage: React.FC = () => {
                         </li>
                       ))}
                     </ul>
+                  </div>
+                </section>
+              )}
+
+              {recipe.custom_tags.length > 0 && (
+                <section aria-label="Custom tags" className="relative">
+                  <h3 className="text-2xl font-serif text-amber-900 mb-4 text-center border-b border-amber-300 pb-2">
+                    Теги
+                  </h3>
+                  <div className="flex flex-wrap justify-center gap-2">
+                    {recipe.custom_tags.map((tag, index) => (
+                      <Link
+                        key={index}
+                        to={`/?q=${encodeURIComponent(tag)}`}
+                        className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-serif hover:bg-purple-200"
+                      >
+                        {tag}
+                      </Link>
+                    ))}
                   </div>
                 </section>
               )}

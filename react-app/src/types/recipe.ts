@@ -6,6 +6,7 @@ export interface Recipe {
   total_time_seconds: number | null;
   steps: Step[];
   dietary_tags: string[];
+  custom_tags: string[];
   source: string | null;
 }
 
