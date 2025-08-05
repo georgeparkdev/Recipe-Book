@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { getAllRecipes } from "../data";
+import { getIngredientCount } from "../utils/getIngredientCount";
 
 const RecipeListPage: React.FC = () => {
   const recipes = getAllRecipes();
@@ -16,11 +17,6 @@ const RecipeListPage: React.FC = () => {
       return `${hours} ч ${remainingMinutes} мин`;
     }
     return `${minutes} мин`;
-  };
-
-  // Get ingredient count
-  const getIngredientCount = (ingredients: any[]): number => {
-    return ingredients.length;
   };
 
   return (
