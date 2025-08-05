@@ -1,0 +1,5 @@
+# requirements.txt for transcribe_audio.py
+openai-whisper>=20230314
+ffmpeg-python>=0.2.0
+numpy>=1.23.0
+torch>=2.0.0

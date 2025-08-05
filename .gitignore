@@ -1,1 +1,4 @@
-./.audio-inputs/
+.audio-inputs/
+.audio-outputs/
+
+venv/
