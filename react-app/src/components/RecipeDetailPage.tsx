@@ -80,16 +80,7 @@ const RecipeDetailPage: React.FC = () => {
       <div className="max-w-4xl mx-auto">
         {/* Book Page Background */}
         <div className="bg-gradient-to-b from-amber-50 to-orange-50 shadow-2xl relative border border-amber-200 rounded-sm">
-          {/* Page Lines */}
-          <div className="absolute inset-0 opacity-20">
-            {Array.from({ length: 25 }, (_, i) => (
-              <div
-                key={i}
-                className="h-8 border-b border-red-200"
-                style={{ marginTop: i * 32 + "px" }}
-              />
-            ))}
-          </div>
+          {/* Page Lines removed to fix excessive page height */}
 
           {/* Red Margin Line */}
           <div className="absolute left-16 top-0 bottom-0 w-px bg-red-300 opacity-40" />
@@ -140,8 +131,11 @@ const RecipeDetailPage: React.FC = () => {
                 </div>
               </div>
               <h2 className="mt-4 text-amber-800 text-xl font-serif italic">
-                ~ {chefName} ~
+                ~ Шеф-повар ~
               </h2>
+              <div className="text-amber-700 text-base font-serif italic mt-1">
+                {chefName}
+              </div>
             </header>
 
             <main className="space-y-8">
