@@ -10,7 +10,11 @@ const recipeModules = import.meta.glob<Recipe>('./recipes/*.json', {
 const recipes: RecipeWithId[] = Object.entries(recipeModules).map(([path, recipe]) => {
   const fileName = path.split('/').at(-1) ?? '';
   const id = fileName.replace(/\.json$/, '');
-  return { ...recipe, id };
+  // Ensure recipe is an object before spreading
+  if (typeof recipe === 'object' && recipe !== null) {
+    return { ...(recipe as object), id } as RecipeWithId;
+  }
+  throw new Error(`Invalid recipe data in ${path}`);
 });
 
 export default recipes;
